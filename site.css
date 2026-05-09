@@ -1,0 +1,250 @@
+:root {
+  color-scheme: dark;
+  --bg: #1c1c1e;
+  --bg-top: #202124;
+  --surface: #2c2c2e;
+  --surface-strong: #242426;
+  --surface-soft: rgba(44, 44, 46, 0.78);
+  --border: rgba(255, 255, 255, 0.08);
+  --text: #f5f5f7;
+  --muted: #98989f;
+  --quiet: #636366;
+  --accent: #0a84ff;
+  --accent-soft: rgba(10, 132, 255, 0.14);
+  --success: #30d158;
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+  --radius-lg: 24px;
+  --radius-md: 18px;
+  --radius-sm: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+    "Helvetica Neue", Arial, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, rgba(10, 132, 255, 0.16), transparent 28%),
+    linear-gradient(180deg, var(--bg-top) 0%, var(--bg) 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+code {
+  padding: 2px 6px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  font-size: 0.92em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  border-radius: 14px;
+}
+
+.shell {
+  width: min(980px, calc(100% - 32px));
+  margin: 48px auto 64px;
+}
+
+.shell--page {
+  width: min(820px, calc(100% - 32px));
+}
+
+.hero,
+.page-body,
+.page-card {
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.hero {
+  margin-bottom: 18px;
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  background: var(--surface-soft);
+  backdrop-filter: blur(20px);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: #8fc2ff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 16px 0 8px;
+  font-size: clamp(34px, 7vw, 54px);
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.back-link {
+  margin-bottom: 14px;
+}
+
+.back-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.page-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.page-card {
+  display: block;
+  padding: 22px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(180deg, rgba(58, 58, 60, 0.52), rgba(36, 36, 38, 0.92));
+  transition: transform 120ms ease, border-color 120ms ease;
+}
+
+.page-card:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.page-card__name {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.page-card__summary {
+  margin: 10px 0 14px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.page-card__meta {
+  color: var(--quiet);
+  font-size: 13px;
+}
+
+.page-body {
+  padding: 24px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(180deg, rgba(58, 58, 60, 0.52), rgba(36, 36, 38, 0.92));
+}
+
+.outline,
+.outline ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.outline__item {
+  margin: 10px 0;
+  line-height: 1.55;
+}
+
+.outline__item::marker {
+  color: var(--success);
+}
+
+.outline__heading {
+  margin: 0 0 6px;
+  letter-spacing: -0.03em;
+}
+
+.outline__heading:first-child {
+  margin-top: 0;
+}
+
+.outline__text,
+.outline__task {
+  color: var(--text);
+}
+
+.outline__text a,
+.outline__heading a,
+.outline__task a {
+  color: #8fc2ff;
+}
+
+.page-ref {
+  color: var(--muted);
+}
+
+.task-badge {
+  display: inline-flex;
+  margin-right: 10px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.task-badge--now,
+.task-badge--doing {
+  background: rgba(255, 159, 10, 0.16);
+  color: #ffbe63;
+}
+
+.task-badge--todo,
+.task-badge--later,
+.task-badge--waiting {
+  background: rgba(10, 132, 255, 0.16);
+  color: #8fc2ff;
+}
+
+.task-badge--done {
+  background: rgba(48, 209, 88, 0.16);
+  color: #8ef0aa;
+}
+
+.asset-missing {
+  color: #ff9f0a;
+}
+
+.empty-state {
+  margin: 0;
+  color: var(--muted);
+}
+
+@media (max-width: 640px) {
+  .shell,
+  .shell--page {
+    width: min(100%, calc(100% - 24px));
+    margin: 24px auto 40px;
+  }
+
+  .hero,
+  .page-body,
+  .page-card {
+    padding: 20px;
+  }
+}
