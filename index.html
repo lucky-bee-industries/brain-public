@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>daliani</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #1c1c1e;
+        --surface: #2c2c2e;
+        --surface-strong: #242426;
+        --border: rgba(255, 255, 255, 0.08);
+        --text: #f5f5f7;
+        --muted: #98989f;
+        --accent: #30d158;
+        --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+        --radius: 18px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+          "Helvetica Neue", Arial, sans-serif;
+        background:
+          radial-gradient(circle at top, rgba(48, 209, 88, 0.12), transparent 32%),
+          linear-gradient(180deg, #202124 0%, var(--bg) 100%);
+        color: var(--text);
+      }
+
+      main {
+        width: min(760px, calc(100% - 32px));
+        margin: 48px auto;
+      }
+
+      .hero {
+        margin-bottom: 16px;
+        padding: 28px;
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        background: rgba(44, 44, 46, 0.78);
+        backdrop-filter: blur(20px);
+        box-shadow: var(--shadow);
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 12px;
+        border-radius: 999px;
+        background: rgba(48, 209, 88, 0.14);
+        color: #8ef0aa;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 16px 0 8px;
+        font-size: clamp(32px, 7vw, 48px);
+        line-height: 1;
+        letter-spacing: -0.04em;
+      }
+
+      .subtitle {
+        margin: 0;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .card {
+        padding: 24px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: linear-gradient(180deg, rgba(58, 58, 60, 0.52), rgba(36, 36, 38, 0.92));
+        box-shadow: var(--shadow);
+      }
+
+      h2,
+      h3 {
+        margin: 0;
+        letter-spacing: -0.03em;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+
+      h3 {
+        margin-top: 20px;
+        color: var(--muted);
+        font-size: 15px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      ul {
+        margin: 16px 0 0;
+        padding-left: 20px;
+      }
+
+      li {
+        margin: 10px 0;
+        line-height: 1.55;
+      }
+
+      li::marker {
+        color: var(--accent);
+      }
+
+      .footer {
+        margin-top: 16px;
+        color: #636366;
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <div class="eyebrow">Public Page</div>
+        <h1>daliani</h1>
+        <p class="subtitle">Published from a LogSeq page for simple browser viewing.</p>
+      </section>
+
+      <article class="card">
+        <h2>Rutina de Siempre</h2>
+        <h3>Orden superficial</h3>
+        <ul>
+          <li>Hacer un orden superficial.</li>
+          <li>
+            Poner una nueva carga de ropa para lavar.
+            <ul>
+              <li>Recordar sacar la ropa cuando termine y ponerla a secar antes de irte.</li>
+            </ul>
+          </li>
+          <li>Asegurarse de que todo lo que esté en el piso esté guardado y organizado.</li>
+          <li>No hacer limpieza profunda, barrer ni trapear el piso hasta el final del día.</li>
+          <li>Limpiar mis lentes.</li>
+          <li>
+            Confirmar las otras tareas del día.
+            <ul>
+              <li>Ver qué otras cosas faltan para comprar.</li>
+            </ul>
+          </li>
+        </ul>
+      </article>
+
+      <p class="footer">Source page: <code>daliani</code></p>
+    </main>
+  </body>
+</html>
