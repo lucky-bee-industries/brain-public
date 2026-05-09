@@ -1,0 +1,3 @@
+{:meta/version 1
+ :default-home {:page "daliani"}
+ :publishing/all-pages-public? false}
